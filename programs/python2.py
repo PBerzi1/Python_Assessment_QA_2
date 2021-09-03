@@ -29,10 +29,10 @@ import random
 
 # <HINT>
 # How does a for loop iterate through a string?
-
-
 def one(string):
-    return
+    return ''.join([c+c+c for c in string])
+
+
 
     # <QUESTION 2>
 
@@ -48,10 +48,18 @@ def one(string):
     # <HINT>
     # What operator will give you the remainder?
     # Use your CLI to access the Python documentation and get help manipulating strings - help(range).
-
-
 def two(num):
-    return
+        if num <=1 or num % 1 >0:
+            return False
+        else:
+            for i in range(2, num//2):
+                if num % i ==0:
+                    return False
+        return True
+        
+        return
+
+
 
     # <QUESTION 3>
 
@@ -69,6 +77,7 @@ def two(num):
 
 
 def three(a):
+
     return
 
     # <QUESTION 4>
@@ -99,7 +108,9 @@ def three(a):
 
 
 def four(string1, string2):
-    return
+    d = ''.join(''.join(x) for x in zip(string1,string2))
+
+    return d
 
     # <QUESTION 5>
 
@@ -114,11 +125,27 @@ def four(string1, string2):
     # <HINT>
     # There is a module which can be used to generate random numbers, this module is called random.
     # The random module contains a function called randint.
-
-
 def five():
-    return
+    result = []
+    while len(result) != 5:
+        number = random.randint(100,200)
+        if number%2 == 0:
+            result.append(number)
+    return result
+print(five())
+    ##
+#def five():
+    #import random list = [random.randint(100,200) for  in range(5)
+    #return 
 
+
+
+#import random = [random.randint(100,200)] for  in range(5)
+
+        #five = [random.randint(100, 200) for i in range(0, 5)]
+    #print(five)
+
+###
     # <QUESTION 6>
 
     # Given a string, return the boolean True if it ends in "py", and False if not.
@@ -135,9 +162,12 @@ def five():
     # <HINT>
     # There are no hints for this question.
 
-
 def six(string):
-    return
+    if string.lower().endswith("py"):
+        return True
+    else:
+        return False
+
 
     # <QUESTION 7>
 
@@ -181,7 +211,7 @@ def seven(a, b, c):
 
 
 def eight(string, num):
-    return
+    return 
 
     # <QUESTION 9>
 
@@ -199,8 +229,9 @@ def eight(string, num):
 
 
 def nine(string1, string2):
+
     # make sure string1 is the shortest of the two
-    return
+    return 
 
     # <QUESTION 10>
 
